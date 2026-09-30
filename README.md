@@ -62,8 +62,7 @@ DeepSeek Harness 桌面端的阅读增强插件：把对话界面调成适合长
 
 - git 地址（推荐）：
   `git+https://github.com/Richardwongyk/dsh-happy-reader.git`
-- 或本地目录：`file:C:/path/to/dsh-happy-reader`
-- 发布到 npm 后，也可直接输入包名 `dsh-happy-reader`
+- 或本地目录（已下载到本机时）：`file:C:/path/to/dsh-happy-reader`
 
 **或命令行**：
 
