@@ -6,6 +6,18 @@
   "license": "MIT",
   "author": "Richardwongyk",
   "repository": "https://github.com/Richardwongyk/dsh-happy-reader",
+  "homepage": "https://github.com/Richardwongyk/dsh-happy-reader#readme",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "plugin",
+    "reader",
+    "reading",
+    "typography",
+    "fullscreen",
+    "electron"
+  ],
   "main": "lib/index.js",
   "exports": {
     ".": "./lib/index.js",
