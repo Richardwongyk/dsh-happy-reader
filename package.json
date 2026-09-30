@@ -1,0 +1,31 @@
+{
+  "name": "dsh-happy-reader",
+  "version": "0.7.2",
+  "description": "Happy Reader（阅读增强）：隐藏输入框 / 上边栏、全屏切换、字号 10–40px、内容宽度扩展、中英文分别选正文字体 + 代码字体（仅列本机已装）—— 与官方设置协同，不冲突",
+  "type": "module",
+  "license": "MIT",
+  "author": "Richardwongyk",
+  "repository": "https://github.com/Richardwongyk/dsh-happy-reader",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  }
+}

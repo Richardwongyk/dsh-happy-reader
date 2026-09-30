@@ -1,0 +1,9 @@
+# dsh-happy-reader（Happy Reader）组合包补丁层。
+#
+# 安装本包（官方插件页 / `dsh plugin add`）后，加载器会把下面这行插入
+# profile 的插件图；行名自引用本包，由 profile 安装位置解析到 lib/index.js。
+# 浏览器半边（lib/client.js）由应用启动扫描按 package.json 的 dsh.client
+# 声明自动发现，无需在此声明。
+- insert:
+    - id: dsh-happy-reader
+      name: 'dsh-happy-reader'
