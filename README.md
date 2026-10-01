@@ -75,6 +75,10 @@ DeepSeek Harness 桌面端的阅读增强插件：把对话界面调成适合长
   （直接粘贴到论文、笔记里就是可编辑的公式源码，不会再是一团乱码）
 - **含公式的复制会同时写入富文本格式**（与 Cherry Studio 的 copy-tex 同策略）：
   粘贴到 Word、WPS 等支持富文本的地方，公式仍以可显示的样子出现
+- **底层全部使用开源标准件**：公式还原 = KaTeX 官方 `copy-tex` 的同源做法（读
+  `annotation` 源码出口）；"标签→Markdown"映射 = MIT 许可的
+  [turndown](https://github.com/mixmark-io/turndown) 库（逐字内联、随包分发，
+  许可全文保留在 `lib/client.js` 尾部的 vendored 段）
 - **代码块**转为 \`\`\` 围栏、行内代码保留反引号
 - **加粗/斜体/删除线/链接/图片/标题/列表**按 Markdown 语法保留
 - 只在消息区域生效；复制界面其它地方（如设置、输入框）保持系统默认行为
@@ -110,4 +114,5 @@ dsh plugin --profile <profile> add "git+https://github.com/Richardwongyk/dsh-hap
 
 ## 许可
 
-MIT（见 LICENSE）。第三方作品，与 DeepSeek 官方无隶属关系。
+MIT（见 LICENSE）。第三方组件：turndown（MIT，逐字内联于 lib/client.js 尾部 vendored 段，
+版权归其原作者所有，许可全文随附）。本插件为第三方作品，与 DeepSeek 官方无隶属关系。
