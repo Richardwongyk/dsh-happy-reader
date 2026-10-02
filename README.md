@@ -97,14 +97,14 @@
 
 **官方插件页**（设置 → 插件）的安装框里输入：
 
-- git 地址（推荐）：
-  `git+https://github.com/Richardwongyk/dsh-happy-reader.git`
+- npm 包名（推荐，最省事）：`dsh-happy-reader`
+- 或 git 地址：`git+https://github.com/Richardwongyk/dsh-happy-reader.git`
 - 或本地目录（已下载到本机时）：`file:C:/path/to/dsh-happy-reader`
 
 **或命令行**：
 
 ```sh
-dsh plugin --profile <profile> add "git+https://github.com/Richardwongyk/dsh-happy-reader.git"
+dsh plugin --profile <profile> add dsh-happy-reader
 ```
 
 ## 卸载
