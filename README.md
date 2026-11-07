@@ -118,7 +118,7 @@
 
 ## 安装
 
-前提：DeepSeek Harness 桌面端（0.2.2-rc.1 验证通过）。
+前提：DeepSeek Harness 桌面端 0.2.2（官方 slots / theme / locale / sessions 接口验证通过）。
 
 **官方插件页**（设置 → 插件）的安装框里输入：
 
@@ -137,9 +137,13 @@ dsh plugin --profile <profile> add dsh-happy-reader
 插件页里卸载，或命令行 `dsh plugin --profile <profile> remove dsh-happy-reader`。
 卸载后应用完全回到原样。
 
+在插件页**停用**（不卸载）同样即时生效：浮动面板、悬浮按钮以及设置页里新增的两行
+「正文字体 · 中文 / 西文」都会立即移除，聊天界面和官方设置恢复原样；若当时处于插件
+全屏，也会一并退出、恢复窗口态；重新启用即恢复。
+
 ## 兼容性
 
-- Windows + DSH 桌面端 0.2.2-rc.1 开发验证；macOS / Linux 未适配
+- Windows + DSH 桌面端 0.2.2 开发验证（按官方客户端插件接口实现）；macOS / Linux 未适配
   （面板避让的是 Windows 系统按钮条，字体候选为 Windows 常用字体）。
 - 依赖官方客户端界面结构，DSH 版本升级后可能需要跟随更新。
 - 运行时按事件工作：无常驻定时轮询；宽度观察器只在面板打开或扩展宽度生效时挂载，
