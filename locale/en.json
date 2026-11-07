@@ -1,6 +1,6 @@
 {
   "meta": {
     "title": "Happy Reader",
-    "description": "Reading enhancements for DSH chat: hide the composer and title bar, tune body/code fonts and sizes, content width, line height, fullscreen, and copy messages as Markdown with formulas restored as LaTeX."
+    "description": "Reading enhancements for DSH chat: hide the composer and title bar, tune body/code/terminal fonts and sizes, content width, line height, fullscreen, and copy messages as Markdown with formulas restored as LaTeX."
   }
 }
