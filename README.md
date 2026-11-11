@@ -128,8 +128,8 @@
 ### 10. 快捷键（官方通用设置）
 - 通过官方 `ctx.shortcuts` 注册两条命令，自动出现在**设置 → 通用 → 快捷键**
   （官方“编辑快捷键”入口）里：**隐藏输入框**、**隐藏上边栏**
-- 桌面端默认键位：Windows/Linux `Ctrl+Shift+I` / `Ctrl+Shift+T`，
-  macOS `⌘+Shift+I` / `⌘+Shift+T`；Web 端默认不绑定
+- 桌面端默认键位：Windows/Linux `Ctrl+Alt+I` / `Ctrl+Alt+T`，
+  macOS `⌘+Option+I` / `⌘+Option+T`；Web 端默认不绑定
 - 在速查里可以直接录制、清除或恢复默认；如果默认键位被注册服务拒绝（与已注册
   命令冲突），插件会自动改为“未绑定”命令；若被固定操作占用，速查会标出冲突，
   仍可自行改键
@@ -167,9 +167,16 @@ dsh plugin --profile <profile> add dsh-happy-reader
 
 ## 兼容性
 
-- Windows + DSH 桌面端 0.2.2 开发验证（按官方客户端插件接口实现）；macOS / Linux 未适配
-  （面板避让的是 Windows 系统按钮条，字体候选为 Windows 常用字体）。
-- 依赖官方客户端界面结构，DSH 版本升级后可能需要跟随更新。
+> 逐版本改动与 DSH 范围见 [CHANGELOG.md](CHANGELOG.md)；旧版本继续保留在 npm 与 GitHub tag 上。
+
+- **0.3.4**：DSH `0.2.2-rc.2` ≤ 版本 < `0.2.3`（`package.json.engines.dsh`）；插件管理器
+  会在安装/更新时拒绝旧 DSH，客户端挂载时也会再做一次版本闸门。
+- **0.3.3 / 0.3.2**：DSH 0.2.2-rc.1 / rc.2；**0.3.0 / 0.3.1**：DSH 0.2.2-rc.1。
+- 仍在旧 DSH 上的用户请显式安装对应旧版，例如
+  `dsh plugin --profile <profile> add dsh-happy-reader@0.3.3`；不要依赖 `latest` 自动升级。
+- Windows + DSH 桌面端实机验证；macOS 已给面板与 Aa 加 `data-window-drag-exclude`
+  基础兼容声明，但未实机验证；Linux 字体候选仍按 Windows 常用字体。
+- 依赖官方客户端界面结构，DSH 版本升级后需要跟随发布对应插件版本。
 - 运行时按事件工作：无常驻定时轮询；宽度观察器只在面板打开或扩展宽度生效时挂载，
   纯高度变化不触发宽度逻辑；字体 token 晚就绪用有限次退避重试（成功后停止）。
 
